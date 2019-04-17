@@ -78,6 +78,7 @@ class CodePanel extends Component {
         //Relative coordinates
        
         var realtive_y= y-this.y;
+
        
         var i=Math.floor(realtive_y/(this.cell_hegiht+this.vertical_space));
         var str=this.instructions[i+this.line_index];
@@ -107,9 +108,9 @@ class CodePanel extends Component {
            
                 var keyCode = e.keyCode;
                 if (keyCode === 13) {
-
                     self.instructions[index]=this.value;
                     document.body.removeChild(this);
+                    input.style.display = 'none';
                     
                 }
             
